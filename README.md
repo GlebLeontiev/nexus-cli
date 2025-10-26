@@ -194,12 +194,13 @@ docker compose down  # Shutdown
 
 **Memory Requirements:**
 - Each thread requires approximately 2GB of RAM
+- The system reserves 25% of memory for OS and other processes
 - The default `docker-compose.yaml` is configured for 2 threads with 6GB memory limit
 - For more threads, adjust both `--max-threads` and the memory limit accordingly:
-  - 1 thread: 3GB minimum
-  - 2 threads: 6GB minimum
-  - 3 threads: 8GB minimum
-  - 4 threads: 10GB minimum
+  - 1 thread: 3GB minimum (2.67GB calculated, rounded up)
+  - 2 threads: 6GB minimum (5.33GB calculated, rounded up)
+  - 3 threads: 8GB minimum (8.00GB calculated)
+  - 4 threads: 11GB minimum (10.67GB calculated, rounded up)
 
 ---
 
