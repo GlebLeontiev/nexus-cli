@@ -37,7 +37,7 @@ pub mod cli_consts {
     pub mod difficulty {
         /// Time threshold for auto-promotion (seconds)
         /// Tasks completing faster than this will promote to next difficulty level
-        pub const PROMOTION_THRESHOLD_SECS: u64 = 7 * 60; // 7 minutes
+        pub const PROMOTION_THRESHOLD_SECS: u64 = 20 * 60; // 7 minutes
     }
 
     // =============================================================================
