@@ -1,10 +1,4 @@
 services:
   nexus-cli:
     build: .
-    command: ["start", "--headless", "--node-id", "<your-node-id>", "--max-threads", "2"]
-    deploy:
-      resources:
-        limits:
-          memory: 6G
-        reservations:
-          memory: 4G
+    command: ["start", "--headless", "--node-id", "<your-node-id>", "--max-threads", "4"]
