@@ -182,7 +182,8 @@ For containerized deployments:
 
 1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 2. Update the node ID in `docker-compose.yaml`
-3. Build and run:
+3. (Optional) Adjust `--max-threads` and memory limits based on your system resources
+4. Build and run:
 
 ```bash
 docker compose build --no-cache
@@ -190,6 +191,15 @@ docker compose up -d
 docker compose logs  # Check logs
 docker compose down  # Shutdown
 ```
+
+**Memory Requirements:**
+- Each thread requires approximately 2GB of RAM
+- The default `docker-compose.yaml` is configured for 2 threads with 6GB memory limit
+- For more threads, adjust both `--max-threads` and the memory limit accordingly:
+  - 1 thread: 3GB minimum
+  - 2 threads: 6GB minimum
+  - 3 threads: 8GB minimum
+  - 4 threads: 10GB minimum
 
 ---
 
